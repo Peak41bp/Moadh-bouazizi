@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Moadh Bouazizi</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header class="header-section">
+    <div class="profile-container">
+      <img
+        src="images/image.jpg"
+        alt="Profile Photo"
+        class="profile-pic"
+      />
+      <h1 class="name">Moadh Bouazizi 😎</h1>
+      <p class="subtitle">Medical Student & Tech Enthusiast 🚀</p>
+      <nav class="social-links">
+        <!-- Contact opens a modal -->
+        <a href="#" id="contactLink">✉️ Contact</a>
+        <a href="https://www.facebook.com/bouazizi.moadh" target="_blank">📘 Facebook</a>
+        <a href="https://www.instagram.com/moadh.peak/" target="_blank">📸 Instagram</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-section">
+    <!-- About Me -->
+    <section class="about-me">
+      <h2>About Me</h2>
+      <p>Born June 5, 2005</p>
+      <p>
+        I’m Moadh Bouazizi, a dedicated medical student with a passion for
+        learning and self-development. Blogging about health, new trends in
+        technology, languages, and chores. I believe in perseverance, teamwork,
+        and constant growth.
+      </p>
+    </section>
+
+    <section class="experiences">
+      <h2>My Experiences</h2>
+      <div class="experiences-grid">
+        <div>
+          <h3>Competitions</h3>
+          <ul>
+            <li>Chess Regional Tournament – 2st Place 🏆</li>
+            <li>Regional Debate Tournament – 3rd Place 🎤</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Self Development Projects</h3>
+          <ul>
+            <li>Reading Quest 2021 – 50+ Books 📚</li>
+            <li>Public Speaking Marathon 2021 🎙️</li>
+            <li>Language Project – Conversational A2 German in 6 months 🌍</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Charity Work</h3>
+          <ul>
+            <li>Volunteered with Community Health Center 🏥</li>
+            <li>Book Donation Campaign Organizer 🤝</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Sports</h3>
+          <ul>
+            <li>Chess Club Member ♟️</li>
+            <li>Positional Football Player ⚽</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills-languages">
+      <h2>Skills &amp; Languages</h2>
+      <p>
+        <strong>Languages:</strong> Arabic (Native), French (C2), English (C1),
+        German (A2-Level)
+      </p>
+      <p>
+        <strong>Skills:</strong> Medical Knowledge, Research, Problem Solving, Communication
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Moadh Bouazizi. All rights reserved.</p>
+  </footer>
+
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h3>Contact Information</h3>
+      <p>Email: bouazizimoadh4@gmail.com</p>
+      <p>Tel: +21620959282</p>
+    </div>
+  </div>
+
+  <!-- JavaScript for Modal -->
+  <script>
+    // Get modal element
+    const modal = document.getElementById("contactModal");
+    // Get open modal link
+    const contactLink = document.getElementById("contactLink");
+    // Get close button
+    const closeModal = document.getElementById("closeModal");
+  
+    contactLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      modal.style.display = "block";
+    });
+  
+    closeModal.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+  
+    window.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
